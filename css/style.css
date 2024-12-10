@@ -1,57 +1,320 @@
 body {
-    background-color: #24353F;
-    font-family: sans-serif;
+    color: #bfc1c8;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    background-color: #1e202b
 }
 
-:root {
-    --primaryShadowColor: #17a2b8;
+.text-gray {
+    color: #bfc1c8;
 }
 
-.form-control:focus {
-    border-color: var(--primaryShadowColor);
-    box-shadow: none;
+.w-60 {
+    width: 60px;
 }
 
-h1 {
-    font-size: 40px;
-    color: var(--primaryShadowColor);
+.fit {
+    width: fit-content;
 }
 
-.submit-btn .btn {
-    border: 1px solid var(--primaryShadowColor);
-    color: var(--primaryShadowColor);
-    transition: background-color 0.3s ease, color 0.3s ease;
+.col-white {
+    border: 2px solid transparent;
+    border-radius: 30px;
+    color: white;
+    transition: all 0.3s ease;
+    padding: 5px 25px;
 }
 
-.submit-btn .btn:hover {
-    background-color: var(--primaryShadowColor);
+.current-page {
+    border: 2px solid #009ad8;
+    color: #009ad8;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    padding: 5px 25px;
+}
+
+.col-white:hover {
+    border: 2px solid #009ad8;
+    color: #009ad8;
+}
+
+.background {
+    background-image: url(../images/banner.png);
+    background-position: center center;
+    background-size: cover;
+    height: 70vh;
+}
+
+.find-location {
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.find-location input[type="text"] {
+    width: 100%;
+    padding: 20px 50px 20px 20px;
+    background: #1e202b;
     color: white;
 }
 
-.account-question a:hover {
-    text-decoration: underline !important;
+.find-location input[type="submit"],
+.find-location input[type="button"] {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 0 40px;
 }
 
-.btn-outline-warning {
-    color: rgba(255, 255, 255, 0.5);
+form input,
+form textarea,
+form select {
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
 }
 
-.btn-outline-warning:hover {
-    color: rgba(255, 255, 255, 0.75);
+.button,
+form input[type="submit"],
+form input[type="button"],
+form button,
+form input[type="reset"] {
+    border: none;
+    background: #009ad8;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
 }
 
-.home-content p {
-    font-size: 40px;
-    font-weight: 500;
-    color: var(--primaryShadowColor);
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
 }
 
-.boxShadow {
-    box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.5);
+.header {
+    background-color: rgb(45 48 61);
 }
 
-@media screen and (max-width:991px) {
-    h1 {
-        font-size: 25px;
+.bg-caption {
+    background-color: #323544;
+}
+
+.bg-header {
+    background-color: #222530;
+}
+
+.bg-tomorrow {
+    background-color: #262936;
+}
+
+.weather-card {
+    transform: translateY(-40%);
+}
+
+.f-0 {
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+}
+
+.vh-70 {
+    height: 70vh;
+}
+
+.footer {
+    background-color: #262936;
+}
+
+.subscribe-form {
+    position: relative;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 20px 100px 20px 20px;
+    background: #1e202b;
+    width: 100%;
+    color: white;
+}
+
+.subscribe-form input[type="submit"],
+.subscribe-form input[type="button"] {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #1e202b;
+    color: #009ad8;
+    text-align: center;
+    line-height: 2;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-size: 20px;
+    font-size: 1.4285714286em;
+}
+
+.social-links a:hover {
+    color: white;
+    background-color: #009ad8;
+}
+
+
+.breadcrumb {
+    background: #262936;
+    border-radius: 40px;
+    padding: 20px 30px;
+    font-size: 13px;
+    font-size: 0.9285714286em;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.contact-details {
+    background: #262936;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.contact-details .map {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.map {
+    height: 220px;
+}
+
+.contact-form input:not([type="submit"]),
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid #393c48;
+    background: transparent;
+}
+
+.contact-form input:not([type="submit"]),
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid #393c48;
+    background: transparent;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+}
+
+.contact-form input:not([type="submit"]),
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    color: white;
+    border: 2px solid #393c48;
+    background: transparent;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.contact-form .text-right {
+    text-align: right;
+}
+
+.contact-form input:not([type="submit"]):hover,
+.contact-form input:not([type="submit"]):focus,
+.contact-form textarea:hover,
+.contact-form textarea:focus {
+    border-color: #009ad8;
+}
+
+.bg-gray {
+    background-color: #34383c;
+}
+
+@media screen and (max-width: 768px) {
+    .weather-card {
+        transform: translateY(5%);
+    }
+
+    .footer {
+        margin-top: 300px;
+    }
+}
+
+.header-site {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-site {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.ul-site {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ul-site li {
+    margin: 0 10px;
+}
+
+@media (max-width: 991px) {
+    .header-site {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-site {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ul-site {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .ul-site li {
+        margin: 10px 0;
     }
 }

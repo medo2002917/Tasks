@@ -1,35 +1,131 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Login Page</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather</title>
+</head>
 
+<body>
+    <header class="bg-dark-gray header-site">
+        <div class="container container-site  py-5 justify-content-between">
+            <a class="text-decoration-none fit text-white d-flex justify-content-center align-items-center" href="#">
+                <img src="images/logo.png" alt="" class="me-3 w-60">
+                <div>
+                    <h1 class="h6 m-0">Weather</h1>
+                    <small>tagline goes here</small>
+                </div>
+            </a>
+            <div>
+                <ul class="d-flex ul-site justify-content-between">
+                    <li class="px-2"><a href="#" class="text-decoration-none current-page">Home</a></li>
+                    <li class="px-2"><a href="#" class="text-decoration-none col-white">News</a></li>
+                    <li class="px-2"><a href="#" class="text-decoration-none col-white">Live cameras</a></li>
+                    <li class="px-2"><a href="#" class="text-decoration-none col-white">Photos</a></li>
+                    <li class="px-2" id="contact"><a href="#" class="text-decoration-none col-white">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
-        <section id="login">
-            <div class="container">
-                <div class="login-content text-center w-75 m-auto my-5 p-5 boxShadow">
-                    <div class="header pb-4">
-                        <h1>Smart Login System</h1>
+    <main class="position-relative main">
+        <section class="background d-flex justify-content-center align-items-center">
+            <div class="container d-flex justify-content-center align-items-center w-100">
+                <form class="find-location w-100">
+                    <input type="text" placeholder="Find your location..." id="search">
+                    <input type="button" value="Find" id="submit">
+                </form>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center align-items-center position-relative vh-70">
+            <div class="container  position-absolute weather-card">
+                <div class="row g-0 " id="weatherInfo">
+                    <div class="col-md-4 bg-caption p-0 border-0 rounded-start-3">
+                        <div class="header border-0 rounded-start-3 d-flex justify-content-between p-2">
+                            <div id="day">Monday</div>
+                            <div><span id="number">9</span> <span id="month">December</span></div>
+                        </div>
+                        <div class="forecast-content p-3">
+                            <div id="location" class="fs-5">Cairo</div>
+                            <div class="f-0">
+                                <span><span id="degree">19.3</span><sup>°C</sup></span>
+                                <div>
+                                    <img src="images/113.webp" alt="Weather Icon" id="icon" width="90">
+                                </div>
+                            </div>
+                            <div id="custom" class="my-3 text-info h6">Clear</div>
+                            <div class="d-flex">
+                                <span class="me-3"><img src="images/icon-umberella.png" alt="Rain Icon"
+                                        class="me-1"><span id="rain">20</span>%</span>
+                                <span class="me-3"><img src="images/icon-wind.png" alt="Wind Speed Icon"
+                                        class="me-1"><span id="wind">18</span> km/h</span>
+                                <span><img src="images/icon-compass.png" alt="Wind Direction Icon" class="me-1"><span
+                                        id="direction">East</span></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="content">
-                        <input type="email" id="emailLoginInput"  class="form-control text-white mb-3 bg-transparent" placeholder="Enter your email" >
-                        <input type="password" id="passwordLoginInput" class="form-control text-white mb-4 bg-transparent" placeholder="Enter your password" >
-                        <p id="alertMassage" class="d-none"></p>
+                    <div class="col-md-4 bg-tomorrow p-0 border-0">
+                        <div class="bg-header border-0 p-2">
+                            <div class="day text-center">Tuesday</div>
+                        </div>
+                        <div class="forecast-content text-center">
+                            <div class="icon my-4">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Partly Cloudy Icon"
+                                    width="48">
+                            </div>
+                            <div class="maxDegree h4 text-white">23.7<sup>°C</sup></div>
+                            <small class="h5 minDegree">14.1<sup>°C</sup></small>
+                            <div class="custom text-info h6 mt-4">Partly Cloudy</div>
+                        </div>
                     </div>
-                    <div class="submit-btn ">
-                        <a id="loginBtn" class="btn w-100">Login</a>
-                    </div>
-                    <div class="account-question mt-3">
-                        <p class="text-white">Don’t have an account? <a href="signup.html" class="text-decoration-none text-white">Signup</a></p>
+                    <div class="col-md-4 bg-caption p-0 border-0 rounded-end-3">
+                        <div class="header">
+                            <div class="day text-center p-2 border-0 rounded-end-3">Wednesday</div>
+                        </div>
+                        <div class="forecast-content text-center">
+                            <div class="icon my-4">
+                                <img src="https://cdn.weatherapi.com/weather/64x64/day/119.png" alt="" width="48">
+                            </div>
+                            <div class="maxDegree h4 text-white">23.6<sup>o</sup>C</div>
+                            <small class="h5 minDegree">14.9<sup>o</sup></small>
+                            <div class="custom text-info h6 mt-4">Cloudy </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+    </main>
 
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/logIn.js"></script>
-    </body>
+    <footer class="footer">
+        <div class="container py-5">
+            <div class="row mt-3 align-items-center">
+                <div class="col-md-8">
+                    <form action="#" class="subscribe-form">
+                        <input type="email" placeholder="Enter your email to subscribe...">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <div class="social-links d-flex justify-content-center align-items-center">
+                        <a href="#" class="mx-1"><i class="fab fa-facebook-f  text-decoration-none p-2 fs-4"></i></a>
+                        <a href="#" class="mx-1"><i class="fab fa-twitter text-decoration-none p-2 fs-4"></i></a>
+                        <a href="#" class="mx-1"><i class="fab fa-google-plus text-decoration-none p-2 fs-4"></i></a>
+                        <a href="#" class="mx-1"><i class="fab fa-pinterest text-decoration-none p-2 fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
 </html>
